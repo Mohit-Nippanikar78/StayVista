@@ -1,0 +1,245 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body{
+    color: white;
+    background-color: #2a1b3d;
+}
+.search {
+  text-align: center;
+  padding: 10px 0px 0px 0px;
+  background: var(--brank-violet);
+
+  color: white;
+  position: relative;
+}
+
+.searchbar {
+  padding: 10px;
+}
+.searchbar h2 {
+  padding: 5px;
+}
+.searchbar h4 {
+  color: grey;
+}
+form {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid white;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.fa {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #07051a;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+
+form:hover {
+  width: 300px;
+  cursor: pointer;
+}
+
+form:hover input {
+  display: block;
+}
+
+form:hover .fa {
+  background: #07051a;
+  color: white;
+}
+
+/* Menu */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px;
+}
+.menu211 {
+  vertical-align: middle;
+  margin: auto;
+}
+.menu211 .menu2112 img {
+  width: 300px;
+  height: 250px;
+  border-radius: 15px;
+  transition: ease-in-out 0.4s;
+}
+.menu211 img:hover {
+  transform: scale(1.2);
+  border-radius: 15px;
+}
+.menu2112 {
+  border-radius: 15px;
+  text-align: left;
+  height: 250px;
+  overflow: hidden;
+}
+
+.menu2111 {
+  padding-left: 0px;
+
+  text-align: left;
+}
+
+.menu2111 h3 {
+  color: hsl(210, 36%, 96%);
+  text-transform: capitalize;
+  font-family: "Roboto";
+  letter-spacing: 0.25rem;
+  margin: 15px 0px;
+  height: 100%;
+  border-bottom: 1px solid hsl(210, 22%, 49%);
+  font-size: 20px;
+  animation: animatebottom 1s linear normal;
+
+  font-weight: 500;
+  color: #dc9200;
+}
+.vegornonveg {
+  margin: 0px;
+  padding: 0px;
+  content: "";
+  height: 0px;
+}
+
+.vegornonveg img {
+  position: relative;
+  bottom: -30px;
+  width: 20px;
+  height: 20px;
+  margin: 0px;
+  padding: 0px;
+}
+.stars {
+  font-size: 15px;
+  color: #3d3d3d;
+  margin: 0px;
+}
+.reviews {
+  margin: 0px;
+}
+
+.suit {
+  background-color: rgb(39, 129, 231);
+  border-radius: 3px;
+  margin-left: -10px;
+  position: relative;
+  letter-spacing: 2px;
+  top: 230px;
+  width: 120px;
+  border-bottom-left-radius: 0px;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  z-index: 6;
+}
+.suit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  border-top: yellow 20px solid;
+  border-right: 20px solid transparent;
+  border-top-right-radius: 100%;
+  width: 0;
+  transform: rotate(45deg);
+  z-index: 3;
+}
+.suit::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  border-left: transparent 10px solid;
+  border-top: 10px solid rgb(39, 129, 231);
+  width: 0;
+  z-index: 3;
+  left: 0px;
+}
+
+.proextra {
+  background-color: gold;
+  border-radius: 3px;
+  margin-left: -10px;
+  position: relative;
+  letter-spacing: 2px;
+  top: 240px;
+  width: 120px;
+  border-bottom-left-radius: 0px;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  z-index: 6;
+}
+.proextra::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  border-top: yellow 20px solid;
+  border-right: 20px solid transparent;
+  border-top-right-radius: 100%;
+  width: 0;
+  transform: rotate(45deg);
+  z-index: 3;
+}
+.proextra::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  border-left: transparent 10px solid;
+  border-top: 10px solid gold;
+  width: 0;
+  z-index: 3;
+  left: 0px;
+}
+.newlyopened {
+  position: relative;
+  top: -110px;
+  border-radius: 3px;
+  background-color: rgb(255, 153, 0);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  letter-spacing: 1px;
+  width: 130px;
+  margin: auto;
+
+  border-bottom-left-radius: 0px;
+  color: #fff;
+  border-top-left-radius: 0px;
+  text-align: center;
+}

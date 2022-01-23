@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-start">
+        <i class="fas fa-chart-line"></i>
+
+        <h1 style="font-family: Aquire, sans serif" id="sidebar-title">
+          Dashboard
+        </h1>
+      </div>
+      <div class="sidebar-mid">
+        <ul>
+          <li class="sidebar-links">
+            <a href="#" class="sidebar-a-active"
+              ><i class="fas fa-fire-alt"></i>
+              <h2>Progress</h2></a
+            >
+          </li>
+          <li class="sidebar-links">
+            <a href="#"
+              ><i class="fas fa-users"></i>
+              <h2>Customers</h2></a
+            >
+          </li>
+          <li class="sidebar-links">
+            <a href="#"
+              ><i class="fas fa-tasks"></i>
+              <h2>Projects</h2></a
+            >
+          </li>
+          <li class="sidebar-links">
+            <a href="#"
+              ><i class="fas fa-boxes"></i>
+              <h2>Inventory</h2></a
+            >
+          </li>
+          <li class="sidebar-links">
+            <a href="#"
+              ><i class="fas fa-shopping-bag"></i>
+              <h2>Order</h2></a
+            >
+          </li>
+          <li class="sidebar-links">
+            <a href="#"
+              ><i class="far fa-user-circle"></i>
+              <h2>Account</h2></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="sidebar-end"></div>
+    </div>
+    <div id="sidebar-auto-close" onclick="toggleSidebar()"></div>
+
+    <div class="main" id="main">
+      <div class="nav" id="nav">
+        <div class="nav-start">
+          <div class="nav-toggle" id="nav-toggle">
+            <i class="fas fa-bars" onclick="toggleSidebar()"></i>
+          </div>
+
+          <div class="nav-logo">
+            <img src="../cropped-logo.jpg" alt="" />
+          </div>
+        </div>
+        <div class="nav-search">
+          <i class="fa fa-search" aria-hidden="true"></i>
+
+          <input type="text" placeholder="Search here" />
+        </div>
+        <div class="nav-acc">
+          <div class="nav-acc-img">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTslGjQ1Ed_4O3dR46WvUIp-_-IWLrp0h7ffBPIidGNxa8VMurYtcNd31SKKZV5fkL48rE&usqp=CAU"
+              alt=""
+            />
+          </div>
+          <div class="nav-acc-username">
+            <h3>Mohit Nippanikar</h3>
+            <h4>Username@gmail.com</h4>
+          </div>
+        </div>
+      </div>
+      <div class="con">
+        <div class="board">
+          <div class="board-item">
+            <div class="board-item-title">
+              <div id="board-item-count-1">54</div>
+              <h2>Customers</h2>
+            </div>
+            <div class="board-item-icon">
+              <i class="fas fa-users"></i>
+            </div>
+          </div>
+          <div class="board-item">
+            <div class="board-item-title">
+              <div id="board-item-count-2">54</div>
+              <h2>Projects</h2>
+            </div>
+            <div class="board-item-icon">
+              <i class="fas fa-tasks"></i>
+            </div>
+          </div>
+          <div class="board-item">
+            <div class="board-item-title">
+              <div id="board-item-count-3">54</div>
+              <h2>Orders</h2>
+            </div>
+            <div class="board-item-icon">
+              <i class="fas fa-shopping-bag"></i>
+            </div>
+          </div>
+          <div class="board-item">
+            <div class="board-item-title">
+              <div id="board-item-count-4">54</div>
+              <h2>Income</h2>
+            </div>
+            <div class="board-item-icon">
+              <i class="fas fa-wallet"></i>
+            </div>
+          </div>
+        </div>
+        <div class="charts">
+          <div class="project">
+            <div class="project-head">
+              <h1>Recent Projects</h1>
+              <button class="cta">
+                <span class="hover-underline-animation"> Sell all </span>
+                <svg
+                  id="arrow-horizontal"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="10"
+                  viewBox="0 0 46 16"
+                >
+                  <path
+                    id="Path_10"
+                    data-name="Path 10"
+                    d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                    transform="translate(30)"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div class="project-table">
+              <table>
+                <tr>
+                  <th>Project Title</th>
+                  <th>Department</th>
+                  <th>Status</th>
+                </tr>
+                <tr>
+                  <td>UI/UX design</td>
+                  <td>Ui Team</td>
+                  <td><i class="fas fa-circle"></i>review</td>
+                </tr>
+                <tr>
+                  <td>UI/UX design</td>
+                  <td>Ui Team</td>
+                  <td><i class="fas fa-circle"></i>review</td>
+                </tr>
+                <tr>
+                  <td>UI/UX design</td>
+                  <td>Ui Team</td>
+                  <td><i class="fas fa-circle"></i>review</td>
+                </tr>
+                <tr>
+                  <td>UI/UX design</td>
+                  <td>Ui Team</td>
+                  <td><i class="fas fa-circle"></i>review</td>
+                </tr>
+                <tr>
+                  <td>UI/UX design</td>
+                  <td>Ui Team</td>
+                  <td><i class="fas fa-circle"></i>review</td>
+                </tr>
+                <tr>
+                  <td>UI/UX design</td>
+                  <td>Ui Team</td>
+                  <td><i class="fas fa-circle"></i>review</td>
+                </tr>
+                <tr>
+                  <td>UI/UX design</td>
+                  <td>Ui Team</td>
+                  <td><i class="fas fa-circle"></i>review</td>
+                </tr>
+                <tr>
+                  <td>UI/UX design</td>
+                  <td>Ui Team</td>
+                  <td><i class="fas fa-circle"></i>review</td>
+                </tr>
+                <tr>
+                  <td>UI/UX design</td>
+                  <td>Ui Team</td>
+                  <td><i class="fas fa-circle"></i>review</td>
+                </tr>
+                <tr>
+                  <td>UI/UX design</td>
+                  <td>Ui Team</td>
+                  <td><i class="fas fa-circle"></i>review</td>
+                </tr>
+                <tr>
+                  <td>UI/UX design</td>
+                  <td>Ui Team</td>
+                  <td><i class="fas fa-circle"></i>review</td>
+                </tr>
+                <tr>
+                  <td>UI/UX design</td>
+                  <td>Ui Team</td>
+                  <td><i class="fas fa-circle"></i>review</td>
+                </tr>
+                <tr>
+                  <td>UI/UX design</td>
+                  <td>Ui Team</td>
+                  <td><i class="fas fa-circle"></i>review</td>
+                </tr>
+                <tr>
+                  <td>UI/UX design</td>
+                  <td>Ui Team</td>
+                  <td><i class="fas fa-circle"></i>review</td>
+                </tr>
+                <tr>
+                  <td>UI/UX design</td>
+                  <td>Ui Team</td>
+                  <td><i class="fas fa-circle"></i>review</td>
+                </tr>
+                <tr>
+                  <td>UI/UX design</td>
+                  <td>Ui Team</td>
+                  <td><i class="fas fa-circle"></i>review</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="newcustomers">
+            <div class="project-head">
+              <h1>New Customers</h1>
+              <button class="cta">
+                <span class="hover-underline-animation"> See all </span>
+                <svg
+                  id="arrow-horizontal"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="10"
+                  viewBox="0 0 46 16"
+                >
+                  <path
+                    id="Path_10"
+                    data-name="Path 10"
+                    d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                    transform="translate(30)"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div class="newcustomers-list">
+              <div class="newcus">
+                <div class="newcus-img">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Rahul_Gandhi.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="newcus-info">
+                  <div class="newcus-info-detail">
+                    <div class="newcus-info-name">Rahul Gandhi</div>
+                    <div class="newcus-info-work">Indian PM</div>
+                  </div>
+                  <div class="newcus-info-icons">
+                    <i class="far fa-user-circle"></i>
+                    <i class="far fa-comment-dots"></i>
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="newcus">
+                <div class="newcus-img">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Rahul_Gandhi.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="newcus-info">
+                  <div class="newcus-info-detail">
+                    <div class="newcus-info-name">Rahul Gandhi</div>
+                    <div class="newcus-info-work">Indian PM</div>
+                  </div>
+                  <div class="newcus-info-icons">
+                    <i class="far fa-user-circle"></i>
+                    <i class="far fa-comment-dots"></i>
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="newcus">
+                <div class="newcus-img">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Rahul_Gandhi.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="newcus-info">
+                  <div class="newcus-info-detail">
+                    <div class="newcus-info-name">Rahul Gandhi</div>
+                    <div class="newcus-info-work">Indian PM</div>
+                  </div>
+                  <div class="newcus-info-icons">
+                    <i class="far fa-user-circle"></i>
+                    <i class="far fa-comment-dots"></i>
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./dashboard.js" type="text/javascript"></script>
+  </body>
+</html>

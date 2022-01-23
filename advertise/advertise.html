@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: Aquire;
+        src: url(../fonts/AquireBold-8Ma60.otf);
+      }
+      body {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        color: black;
+      }
+
+      .con1 {
+        height: 100vh;
+        width: 100%;
+
+        background-size: 120% 120%;
+        background-repeat: no-repeat;
+        transition: 1s ease-in-out;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .ani-con1 {
+        animation: 4s ani-back infinite;
+      }
+
+      @keyframes ani-back {
+        0% {
+          background-size: 120% 120%;
+        }
+
+        15% {
+          background-size: 100% 100%;
+        }
+
+        85% {
+          background-size: 100% 100%;
+        }
+
+        100% {
+          background-size: 120% 120%;
+        }
+      }
+
+      .con2 {
+        position: absolute;
+        height: 100vh;
+        transform: translateY(50%);
+        left: -100px;
+        transition: 0.5s ease;
+      }
+
+      #prev,
+      #next {
+        font-size: 30px;
+        color: white;
+        padding: 10px;
+        background: linear-gradient(
+          rgba(109, 109, 93, 0.5),
+          rgba(109, 109, 93, 0.5)
+        );
+        transition: 0.5s;
+      }
+
+      #prev:hover,
+      #next:hover {
+        background-color: black;
+        cursor: pointer;
+      }
+
+      .con3 {
+        position: absolute;
+
+        height: 100vh;
+        transform: translateY(50%);
+        transition: ease 0.5s;
+        right: -100px;
+      }
+      #ad-content {
+        width: 40%;
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: saturate(100%) blur(10px);
+        height: 200px;
+        border-top-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        display: grid;
+        place-items: center;
+        font-family: Aquire, sans-serif;
+        color: white;
+        font-size: 30px;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 1                           );
+      }
+    </style>
+  </head>
+
+  <body>
+    <div style="display: none" id="numb">0</div>
+    <div class="con1" id="idcon1">
+      <h2 id="ad-content"></h2>
+
+      <div class="con2" id="idcon2">
+        <i id="prev" class="fas fa-angle-left"></i>
+      </div>
+      <div class="con3" id="idcon3">
+        <i id="next" class="fas fa-angle-right"></i>
+      </div>
+    </div>
+
+    <script>
+      let back = [
+        "https://images.unsplash.com/photo-1552319704-41c50c38c26e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8&w=1000&q=800",
+        "https://wallpapercave.com/wp/wp2587127.jpg",
+        "https://wallpapercave.com/wp/ZlwPHMV.jpg",
+        "https://i.pinimg.com/originals/bb/b8/8e/bbb88ec618f806c87a7c4b0230bcdbb4.jpg",
+      ];
+      let content = [
+        "Grab 60% off on Fresh Flavours",
+        "the best in town",
+        "Explore the Authentic Chinese Cuisine",
+        "Treat Yourself to Delish Biryanis",
+        "Sinful Sweet Indulgences",
+      ];
+      let slide = document.getElementById("idcon1");
+      let next = document.getElementById("next");
+      let prev = document.getElementById("prev");
+      var current = 0;
+      function slider() {
+        slide.style.backgroundImage = "url( " + back[current] + ") ";
+        slide.classList.add("ani-con1");
+        document.getElementById("ad-content").innerHTML = content[current];
+      }
+      slider();
+      next.addEventListener("click", function next() {
+        current++;
+        if (current > back.length - 1) {
+          current = 0;
+        }
+        slider();
+        clearInterval(auto1);
+
+        slide.classList.remove("ani-con1");
+        document.getElementById("idcon2").style.left = "0px";
+        document.getElementById("idcon3").style.right = "0px";
+      });
+      prev.addEventListener("click", function prev() {
+        current--;
+        if (current < 0) {
+          current = back.length - 1;
+        }
+        slider();
+        clearInterval(auto1);
+        slide.classList.remove("ani-con1");
+        document.getElementById("idcon2").style.left = "0px";
+        document.getElementById("idcon3").style.right = "0px";
+        clockStart();
+      });
+      function autoslider() {
+        current++;
+        if (current > back.length - 1) {
+          current = 0;
+        }
+        slider();
+      }
+      let auto1 = setInterval(autoslider, 4000);
+      // Arrow on HOver
+      slide.addEventListener("mouseover", function arrow() {
+        document.getElementById("idcon2").style.left = "0px";
+        document.getElementById("idcon3").style.right = "0px";
+      });
+      slide.addEventListener("mouseout", function arrow() {
+        document.getElementById("idcon2").style.left = "-100px";
+        document.getElementById("idcon3").style.right = "-100px";
+      });
+      let timer = 0;
+
+      // function clockStart() { let clock = setInterval(()=>{if(timer>10){ let auto2 = setInterval(autoslider, 4000); clearInterval(clock)}else{timer++}},1000)}
+    </script>
+  </body>
+</html>
